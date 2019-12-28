@@ -37,7 +37,7 @@
         $stmt ->bindParam(":firstname" ,$_POST["firstName"]);
         $stmt ->bindParam(":pass" ,$_POST["password"]);
         $stmt ->bindParam(":email" ,$_POST["email"]);
-
+        $stmt -> execute();
         $count = $stmt->rowCount();
         if ($count == 1 ){
             $response = "ثبت نام موفقیت آمیز بود";
